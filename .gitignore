@@ -1,4 +1,15 @@
-.import
-.export
+# Godot 4 generated files
 .godot/
+.import/
+.export/
 
+# Build folders
+builds/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
