@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://cwewmr1segnee"]
+
+[ext_resource type="Script" uid="uid://bhrg2o03kpcxv" path="res://camera.gd" id="1_fc0e3"]
+[ext_resource type="Shader" uid="uid://cv7hfm5duhalc" path="res://addons/crt/crt.gdshader" id="2_7jktm"]
+[ext_resource type="Script" uid="uid://bidb08y3r35n" path="res://player_1.gd" id="3_ryrav"]
+[ext_resource type="Script" uid="uid://dw4lyqlekag7s" path="res://player_2.gd" id="4_eow3j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0e48y"]
+shader = ExtResource("2_7jktm")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/warp_amount = 0.962000045695
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2070000098325
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 2.0
+shader_parameter/vignette_intensity = 0.678000032205
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/pixel_strength = -4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(1661, 3445)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4d7sh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kdubu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="camera" type="Camera2D" parent="." node_paths=PackedStringArray("p1", "p2")]
+z_index = 4096
+position = Vector2(578, 463)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("1_fc0e3")
+p1 = NodePath("../player 1")
+p2 = NodePath("../player 2")
+
+[node name="crt shader" type="MeshInstance2D" parent="camera"]
+modulate = Color(1, 1, 1, 0.007843138)
+self_modulate = Color(1, 1, 1, 0.003921569)
+z_index = 29
+material = SubResource("ShaderMaterial_0e48y")
+position = Vector2(255, 1256)
+scale = Vector2(16174, -4870.9995)
+mesh = SubResource("BoxMesh_epypp")
+
+[node name="base floor" type="StaticBody2D" parent="."]
+position = Vector2(4, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base floor"]
+position = Vector2(451.5, 1659.5)
+shape = SubResource("RectangleShape2D_rj586")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="base floor"]
+position = Vector2(451.00006, 1666.25)
+scale = Vector2(1662.0001, 3457.5)
+mesh = SubResource("BoxMesh_4d7sh")
+
+[node name="player 1" type="CharacterBody2D" parent="."]
+script = ExtResource("3_ryrav")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="player 1"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(195, 505)
+scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_kdubu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player 1"]
+position = Vector2(195, 505)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_d21ai")
+
+[node name="player 2" type="CharacterBody2D" parent="."]
+position = Vector2(688, 495)
+script = ExtResource("4_eow3j")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="player 2"]
+modulate = Color(0, 0.5999999, 1, 1)
+self_modulate = Color(0, 0.7999997, 1, 1)
+position = Vector2(-1.1920929e-07, -1.1920929e-07)
+scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_kdubu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player 2"]
+shape = SubResource("RectangleShape2D_d21ai")

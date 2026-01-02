@@ -1,0 +1,199 @@
+[gd_scene load_steps=12 format=3 uid="uid://caonyki60h16f"]
+
+[ext_resource type="Shader" uid="uid://cv7hfm5duhalc" path="res://addons/crt/crt.gdshader" id="1_abvd2"]
+[ext_resource type="FontFile" uid="uid://djshg4vlm5rkj" path="res://VCR_OSD_MONO_1.001.ttf" id="2_behhx"]
+[ext_resource type="Script" uid="uid://drhqduhdaf8a6" path="res://button.gd" id="3_hyt6m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ewj0n"]
+shader = ExtResource("1_abvd2")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 2.0
+shader_parameter/vignette_intensity = 0.754000035815
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/pixel_strength = -2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_tlpvk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlpvk"]
+font = ExtResource("2_behhx")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_ewj0n"]
+font = ExtResource("2_behhx")
+font_size = 35
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n0087"]
+font = ExtResource("2_behhx")
+font_size = 40
+font_color = Color(1.0588765e-06, 0.5720416, 0.8334175, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y42ae"]
+font = ExtResource("2_behhx")
+font_size = 35
+font_color = Color(0, 0.5671667, 0.83, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tnn8a"]
+font = ExtResource("2_behhx")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_abvd2"]
+font = ExtResource("2_behhx")
+font_size = 35
+font_color = Color(0, 0.5671667, 0.83, 1)
+
+[node name="MainUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+z_index = 4096
+material = SubResource("ShaderMaterial_ewj0n")
+position = Vector2(577, 326)
+scale = Vector2(1152.5, 649.50006)
+mesh = SubResource("BoxMesh_tlpvk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 47.0
+offset_right = 928.0
+offset_bottom = 116.0
+text = "platformer fighting game"
+label_settings = SubResource("LabelSettings_tlpvk")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 309.0
+offset_right = 288.0
+offset_bottom = 345.0
+text = "W"
+label_settings = SubResource("LabelSettings_ewj0n")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 354.0
+offset_right = 288.0
+offset_bottom = 390.0
+text = "S"
+label_settings = SubResource("LabelSettings_ewj0n")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 354.0
+offset_right = 328.0
+offset_bottom = 390.0
+text = "D"
+label_settings = SubResource("LabelSettings_ewj0n")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 354.0
+offset_right = 247.0
+offset_bottom = 390.0
+text = "A"
+label_settings = SubResource("LabelSettings_ewj0n")
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 309.0
+offset_right = 883.0
+offset_bottom = 345.0
+text = "I"
+label_settings = SubResource("LabelSettings_n0087")
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 354.0
+offset_right = 883.0
+offset_bottom = 390.0
+text = "K"
+label_settings = SubResource("LabelSettings_n0087")
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 354.0
+offset_right = 923.0
+offset_bottom = 390.0
+text = "L"
+label_settings = SubResource("LabelSettings_n0087")
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 354.0
+offset_right = 842.0
+offset_bottom = 390.0
+text = "J"
+label_settings = SubResource("LabelSettings_n0087")
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 263.0
+offset_right = 356.0
+offset_bottom = 299.0
+text = "PLAYER 1"
+label_settings = SubResource("LabelSettings_ewj0n")
+
+[node name="Label11" type="Label" parent="."]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 262.0
+offset_right = 952.0
+offset_bottom = 298.0
+text = "PLAYER 2"
+label_settings = SubResource("LabelSettings_y42ae")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 299.0
+offset_right = 644.0
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("2_behhx")
+theme_override_font_sizes/font_size = 35
+text = "PLAY"
+script = ExtResource("3_hyt6m")
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 561.0
+offset_right = 755.0
+offset_bottom = 593.0
+text = "made by bladeskilled"
+label_settings = SubResource("LabelSettings_tnn8a")
+
+[node name="Label13" type="Label" parent="."]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 171.0
+offset_right = 709.0
+offset_bottom = 207.0
+text = "PLAYER 2 WINS"
+label_settings = SubResource("LabelSettings_abvd2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
