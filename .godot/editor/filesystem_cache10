@@ -1,0 +1,19 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1767370528
+button.gd::GDScript::8367900927887425003::1767100996::0::1::::<>Button<><>0<>0<><>::
+camera.gd::GDScript::2913250304603535235::1767099941::0::1::::<>Camera2D<><>0<>0<><>::
+game.tscn::PackedScene::6326611575692175856::1767109987::0::1::::<><><>0<>0<><>::uid://bhrg2o03kpcxv::::res://camera.gd<>uid://cv7hfm5duhalc::::res://addons/crt/crt.gdshader<>uid://bidb08y3r35n::::res://player_1.gd<>uid://dw4lyqlekag7s::::res://player_2.gd
+icon.svg::CompressedTexture2D::2254978424987633501::1767089530::1767089540::1::::<><><>0<>0<>9ef1ab0d118598bde99204a937797395<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main ui.tscn::PackedScene::711098348114433516::1767101123::0::1::::<><><>0<>0<><>::uid://cv7hfm5duhalc::::res://addons/crt/crt.gdshader<>uid://djshg4vlm5rkj::::res://VCR_OSD_MONO_1.001.ttf<>uid://drhqduhdaf8a6::::res://button.gd
+player 1 wins.tscn::PackedScene::752302839782782968::1767101337::0::1::::<><><>0<>0<><>::uid://cv7hfm5duhalc::::res://addons/crt/crt.gdshader<>uid://djshg4vlm5rkj::::res://VCR_OSD_MONO_1.001.ttf<>uid://drhqduhdaf8a6::::res://button.gd
+player 2 wins.tscn::PackedScene::4802575374936870067::1767101340::0::1::::<><><>0<>0<><>::uid://cv7hfm5duhalc::::res://addons/crt/crt.gdshader<>uid://djshg4vlm5rkj::::res://VCR_OSD_MONO_1.001.ttf<>uid://drhqduhdaf8a6::::res://button.gd
+player_1.gd::GDScript::86889167633583361::1767109888::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_2.gd::GDScript::8763995169519461706::1767109891::0::1::::<>CharacterBody2D<><>0<>0<><>::
+VCR_OSD_MONO_1.001.ttf::FontFile::7828557733242536945::1767100258::1767100259::1::::<><><>0<>0<>86d5802183e2c339585bcd76c14d814f<>res://.godot/imported/VCR_OSD_MONO_1.001.ttf-50d620f737329356d429da1ce93f3772.fontdata::
+::res://addons/::1767089736
+::res://addons/crt/::1767109839
+crt.gd::GDScript::2822009917176177512::1767089736::0::1::::CRT<>CanvasLayer<>res://addons/crt/icon.svg<>0<>1<><>::
+crt.gdshader::Shader::6313301796621327440::1767109839::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::8549084543803188066::1767089736::1767089736::1::::<><><>0<>0<>2c75f3932924a4dd761fb5869bac0000<>res://.godot/imported/icon.svg-d42ab2f5b702d9b6fcd86eb100b7df53.ctex::
+plugin.cfg::TextFile::-1::1767089736::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::334569071728238072::1767089736::0::1::::<>EditorPlugin<><>0<>1<><>::
